@@ -91,6 +91,12 @@ public class Refresher extends AbstractExtension {
 		}
 	}
 	
+	@Override
+  	public void extend (AbstractClientConnector target) {
+  		// needs to be overriden, since the superclass method is protected.
+    		super.extend(target);
+  	}
+	
 	/**
 	 * Removes a {@link RefreshListener} from this instance.
 	 * 
